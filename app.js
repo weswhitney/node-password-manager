@@ -3,17 +3,24 @@ console.log('starting password manager');
 var storage = require('node-persist');
 storage.initSync();
 
-//storage.setItemSync('accounts', [{
-    //username: 'Wesley',
-    //balance: 0
-//}]);
 
-var accounts= storage.getItemSync('accounts');
+// account.name Facebook
+// account.username User12!
+// account.password Password123
 
-    // push on a new account
-accounts.push({username: 'Whitney', balance: 100});
-    // save using setItemSync
+function createAccount(account) {
+    var accouts = storage.getItemSync('accounts');
 
-storage.setItemSync('accounts', accounts);
+    // if accounts is undefined (use typeof())
+    // set accounts = []
+    //
+    // push on new account
+    //
+    // return account
+}
 
-console.log(accounts);
+function getAccount(accountName) {
+    //var accounts user getItemSync
+    //
+    //iterate over array, return matching account, else undefined
+}
